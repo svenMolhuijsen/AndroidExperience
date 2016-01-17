@@ -9,35 +9,67 @@
     tools:showIn="@layout/activity_main"
     android:background="@color/colorPrimary">
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/AdressInput"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_toStartOf="@+id/GoBttn"
-        android:layout_alignBottom="@+id/GoBttn"
-        android:textColor="#fff"
-        android:hint="enter adress or search term"
-        android:textColorHint="#7a85e7" />
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="GO"
-        android:id="@+id/GoBttn"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:textColor="#fff"
-        android:background="@color/colorAccent" />
+        <ProgressBar
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:id="@+id/progressBar"
+            android:layout_alignParentStart="false"
+            android:layout_toStartOf="@+id/GoBttn"
+            android:layout_alignParentTop="true"
+            android:alpha="1"
+            android:progressTint="#7a85e7"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_alignBottom="@+id/AdressInput" />
 
-    <WebView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/WebView"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_below="@+id/AdressInput" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/AdressInput"
+            android:textColor="#fff"
+            android:hint="enter adress or search term"
+            android:textColorHint="#7a85e7"
+            android:lines="1"
+            android:capitalize="none"
+            android:inputType="textNoSuggestions|none"
+            android:soundEffectsEnabled="false"
+            android:layout_marginLeft="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/GoBttn" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GO"
+            android:id="@+id/GoBttn"
+            android:layout_alignParentEnd="true"
+            android:textColor="#fff"
+            android:background="@color/colorAccent"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignBottom="@+id/AdressInput" />
+
+        <WebView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/WebView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="0dp"
+            android:layout_below="@+id/AdressInput" />
+    </RelativeLayout>
+
+
+
 
 </RelativeLayout>
