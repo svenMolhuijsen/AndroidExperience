@@ -29,7 +29,7 @@ import android.widget.TabHost;
 public class MainActivity extends AppCompatActivity {
 
 
-   Button goBttn;
+    Button goBttn;
     EditText adressInput;
     WebView webView;
     ProgressBar progressBar;
